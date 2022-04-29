@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+app-table {
+  width: calc(100vw - 50px);
+}
+
+@media screen and (max-width: 480px) {
+  app-table {
+    width: calc(100vw - 30px);
+  }
+}
