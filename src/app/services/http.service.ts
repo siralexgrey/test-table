@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from './../../environments/environment';
 import { BehaviorSubject, Observable, share } from 'rxjs';
 import { IRow } from '../components/table/table.component';
+import { USERS } from './../mocks/users';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,6 @@ export class HttpService {
         observer.next(this.savedData[name]);
         return observer.complete();
       }
-      // this.http.get(this.host + this.lang + '/' + route, {headers: this.headers, observe: 'response'}).subscribe(res => {
       this.http.get(this.host + route, {headers: header, observe: 'response'}).subscribe((res: any) => {
         if (res.body) {
           if (save) {
@@ -37,6 +37,10 @@ export class HttpService {
           console.log(res.body);
         }
       }, error => {
+        // insert Mock
+        observer.next(USERS);
+        observer.complete();
+        // end
         console.log(error.body);
       });
     }).pipe(share());
