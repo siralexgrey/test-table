@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host: 'http://www.filltext.com/'
+  host: 'https://www.filltext.com/'
 };
 
 /*
