@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  host: 'https://www.filltext.com/'
+  host: 'http://www.filltext.com/'
 };
