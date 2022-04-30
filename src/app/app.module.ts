@@ -17,12 +17,14 @@ import { AddUserDialogComponent } from './components/add-user-dialog/add-user-di
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    AddUserDialogComponent
+    AddUserDialogComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
